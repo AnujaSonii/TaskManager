@@ -1,0 +1,30 @@
+<div class='container'>
+    <h1>Task Manager</h1>
+    
+    <!-- Logout Button -->
+    <button (click)='logout()' style='float: right;'>Logout</button>
+    
+    <form (ngSubmit)='addTask()'>
+      <div>
+        <input [(ngModel)]='newTask.title' name='title' placeholder='Task Title' required />
+      </div>
+      <div>
+        <textarea [(ngModel)]='newTask.description' name='description' placeholder='Task Description'></textarea>
+      </div>
+      <button type='submit'>Add Task</button>
+    </form>
+    
+    <table *ngIf="tasks.length>0">
+      <tr>
+        <th>Task</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor='let task of tasks'>
+        <td>{{task.title}}</td>
+        <td>{{task.description}}</td>
+        <td><button (click)='deleteTask(task.id)'>Delete</button>
+        </td>
+      </tr>
+    </table>
+</div>

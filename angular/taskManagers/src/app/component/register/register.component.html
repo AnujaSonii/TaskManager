@@ -1,0 +1,22 @@
+<div class="register-container">
+    <h2>Register</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <input [(ngModel)]="registerData.name" name="text" placeholder="Name" autocomplete="off" required />
+      </div>
+      <div>
+        <input [(ngModel)]="registerData.email" name="email" placeholder="Email" autocomplete="off" required />
+      </div>
+      <div>
+        <input [(ngModel)]="registerData.mobileNumber" name="mobileNumber" type="tel" pattern="^[0-9]{10}$" maxlength="10" autocomplete="off" (input)="restrictToNumbers($event)" placeholder="Mobile Number" required />
+      </div>
+      <div>
+        <input [(ngModel)]="registerData.password" name="password" type="password" placeholder="Password" autocomplete="off" required />
+      </div>
+      <div>
+        <input [(ngModel)]="registerData.confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password" autocomplete="off" required />
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a routerLink="/login">Login here</a></p>
+  </div>
