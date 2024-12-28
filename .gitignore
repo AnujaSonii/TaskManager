@@ -1,0 +1,69 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+out-tsc/
+out-tsc/app/
+out-tsc/spec/
+coverage/
+
+# Angular specific files
+.angular/
+.angular-cli.json
+angular.json
+
+# Environment files
+src/environments/environment.ts
+src/environments/environment.prod.ts
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Java specific files
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Maven specific files
+target/
+*.jar
+*.war
+*.ear
+*.class
+*.iml
+
+# IntelliJ IDEA specific files
+*.ipr
+*.iws
+*.idea/
+out/
+
+# Eclipse specific files
+.settings/
+.classpath
+.project
+
+# Spring specific files
+*.h2.db
+*.db
+
+# Other
+*.log
+*.tmp
